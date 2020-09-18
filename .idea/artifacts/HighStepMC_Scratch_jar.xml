@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="HighStepMC-Scratch:jar">
+    <output-path>$USER_HOME$/Desktop/duels/plugins</output-path>
+    <root id="archive" name="HighStepMC-Scratch.jar">
+      <element id="module-output" name="HighStepMC-Scratch" />
+    </root>
+  </artifact>
+</component>
