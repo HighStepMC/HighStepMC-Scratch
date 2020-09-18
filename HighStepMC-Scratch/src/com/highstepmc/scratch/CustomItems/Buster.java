@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.Location;
 
 import java.util.HashSet;
 
@@ -36,7 +37,7 @@ public class Buster extends CustomItem {
     }
 
     @Override
-    public void use(Player user, Entity target) {
+    public void use(Player user, Entity target, Location location) {
         cooldown.check(user);
         if(cooldown.contains(user)) {
             user.sendMessage(ChatColor.GREEN + "Time left: " + cooldown.getTimeLeft(user) / 1000);

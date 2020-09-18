@@ -18,6 +18,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.Location;
 
 public class Reaper extends CustomItem {
 
@@ -40,7 +41,7 @@ public class Reaper extends CustomItem {
     }
 
     @Override
-    public void use(Player user, Entity target) {
+    public void use(Player user, Entity target, Location location) {
         cooldown.check(user);
         if(cooldown.contains(user))
             return;

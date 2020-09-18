@@ -43,7 +43,7 @@ public class EventListener implements Listener {
 		if(customItem.getType().equals(CustomItemType.RIGHT_CLICK)
 				&& !(event.getAction().equals(Action.RIGHT_CLICK_AIR) || event.getAction().equals(Action.RIGHT_CLICK_BLOCK)))
 			return;
-		customItem.use(player, null);
+		customItem.use(player, null, null);
 	}
 
 	@EventHandler
@@ -54,7 +54,7 @@ public class EventListener implements Listener {
 			return;
 		if(!(main.getCustomItemManager().getFromItemStack(player.getItemInHand()).getType() == CustomItemType.INTERACT_ENTITY))
 			return;
-		main.getCustomItemManager().getFromItemStack(player.getItemInHand()).use(player, entity);
+		main.getCustomItemManager().getFromItemStack(player.getItemInHand()).use(player, entity, null);
 	}
 
 	@EventHandler
@@ -64,7 +64,7 @@ public class EventListener implements Listener {
 			return;
 		if(!(main.getCustomItemManager().getFromItemStack(player.getItemInHand()).getType() == CustomItemType.PLACE))
 			return;
-		main.getCustomItemManager().getFromItemStack(player.getItemInHand()).use(player, null);
+		main.getCustomItemManager().getFromItemStack(player.getItemInHand()).use(player, null, event.getBlock().getLocation());
 	}
 
 }
