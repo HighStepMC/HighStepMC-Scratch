@@ -14,5 +14,10 @@ public abstract class CustomItem {
 	public abstract ItemStack getItem();
 
 	public abstract CustomItemType getType();
+
+	public ItemStack setAmount(CustomItem customItem, int amount){
+		getItem().setAmount(amount);
+		return getItem();
+	}
 	
 }
